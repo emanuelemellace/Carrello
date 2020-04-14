@@ -1,0 +1,26 @@
+<h2>Prodotti</h2>
+
+<div *ngFor="let prodotto of prodotti">
+
+  <h3>
+    <a [title]="prodotto.nome + ' dettagli'"
+       [routerLink]="['/prodotti', prodotto.id]">
+       <!-- routerlink aggiunge all'URL attuale la stringa /prodotti/:id del prodotto
+       /prodotti/:id sarà un link che mi reindirizzerà il componente DettaglioProdottoComponent -->
+      {{ prodotto.nome }}
+    </a>
+  </h3>
+
+  <p *ngIf="prodotto.descrizione">
+    Description: {{ prodotto.descrizione }}
+  </p>
+
+  <button (click)="condividi(prodotto)">
+    Condividi prodotto
+  </button>
+
+  <app-product-alert
+   [prodottoAlert]="prodotto"
+   (notifica)="onNotify()"></app-product-alert>
+
+</div>

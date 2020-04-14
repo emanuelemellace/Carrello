@@ -1,0 +1,12 @@
+<h2>Prodotti nel Carrello</h2>
+<div class="cart-item" *ngFor="let prodotto of oggettiNelCarrello">
+  <span>
+    {{ prodotto.nome }}
+  </span>
+  <span>
+    {{ prodotto.prezzo | currency }}
+  </span>
+  <p *ngIf="prodotto.descrizione">
+    Description: {{ prodotto.descrizione }}
+  </p>
+</div>

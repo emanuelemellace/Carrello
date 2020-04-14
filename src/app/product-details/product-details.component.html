@@ -1,0 +1,9 @@
+<h2>Dettagli Prodotto {{prodottoSelezionato.nome}}</h2>
+
+<div *ngIf="prodottoSelezionato">
+  <h3>{{ prodottoSelezionato.nome }}</h3>
+  <h4>{{ prodottoSelezionato.prezzo | currency }}</h4>
+  <p> {{ prodottoSelezionato.descrizione }}</p>
+
+  <button (click)="addToCart(prodottoSelezionato)">Aggiungi al Carrello</button>
+</div>
