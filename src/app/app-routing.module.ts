@@ -5,6 +5,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { DettagliProdottoComponent} from './product-details/product-details.component';
 import { ProductAlertComponent } from './product-alert/product-alert.component';
 import { CarrelloComponent } from './carrello/carrello.component';
+import { SpedizioneComponent } from './spedizione/spedizione.component';
 
 /*definiamo delle regole di routing, ovvero delle associazioni tra path e componente */
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'prodotti/:id', component: DettagliProdottoComponent },
   { path: 'carrello', component: CarrelloComponent },
+  { path: 'spedizione', component: SpedizioneComponent },
 ];
 
 @NgModule({
